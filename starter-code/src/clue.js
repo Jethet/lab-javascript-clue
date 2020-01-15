@@ -1,8 +1,7 @@
 // ITERATION 1
 
 // Suspects Collection
-const suspectsArray = [
-    mrGreen = {
+const mrGreen = {
         firstName: "Jacob",
         lastName: "Green",
         occupation: "Entrepreneur",
@@ -10,9 +9,9 @@ const suspectsArray = [
         description: "He has a lot of connections",
         image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
         color: "green"
-    },
+    };
 
-    drOrchid = {
+const drOrchid = {
         firstName: "Doctor",
         lastName: "Orchid",
         occupation: "Scientist",
@@ -20,9 +19,9 @@ const suspectsArray = [
         description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
         image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "white"
-    },
+    };
 
-    profPlum = {
+const profPlum = {
         firstName: "Victor",
         lastName: "Plum",
         occupation: "Designer",
@@ -30,9 +29,9 @@ const suspectsArray = [
         description: "Billionaire video game designer",
         image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
         color: "purple"
-    },
+    };
 
-    missScarlet = {
+const missScarlet = {
         firstName: "Kasandra",
         lastName: "Scarlet",
         occupation: "Actor",
@@ -40,9 +39,9 @@ const suspectsArray = [
         description: "She is an A-list movie star with a dark past",
         image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "red"
-    },
+    };
 
-    mrsPeacock = {
+const mrsPeacock = {
         firstName: "Eleanor",
         lastName: "Peacock",
         occupation: "Socialité",
@@ -50,9 +49,9 @@ const suspectsArray = [
         description: "She is from a wealthy family and uses her status and money to earn popularity",
         image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
         color: "blue"
-    },
+    };
 
-    mrMustard = {
+const mrMustard = {
         firstName: "Jack",
         lastName: "Mustard",
         occupation: "Retired Football player",
@@ -60,8 +59,9 @@ const suspectsArray = [
         description: "He is a former football player who tries to get by on his former glory",
         image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
         color: "yellow"
-    }
-];
+    };
+
+const suspectsArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 // Rooms Collection
 const roomsArray = [
@@ -176,8 +176,6 @@ const weaponsArray = [
 
 // ITERATION 2
 
-var card;
-
 function selectRandom(cardArray){
     var card = cardArray[Math.floor(Math.random() * cardArray.length)]
     return card;
@@ -198,3 +196,5 @@ function pickMystery(){
 function revealMystery(newMystery){
     return `${newMystery.suspect.firstName} ${newMystery.suspect.lastName} killed Mr. Boddy using the ${newMystery.weapon.name} in the ${newMystery.room.name}!`
 };
+
+console.log(revealMystery(newMystery));
